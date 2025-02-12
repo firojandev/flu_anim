@@ -29,6 +29,8 @@ String setPin = "Set PIN";
 String goToLogin = "Go to Login";
 String msgCongratulations = "Welcome";
 
+String dummyTxt = "At the heart of iPhone SE you’ll find the same superpowerful A15 Bionic chip that’s in iPhone 13";
+
 String home = "Home";
 String menu = "Menu ";
 

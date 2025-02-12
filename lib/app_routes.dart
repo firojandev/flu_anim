@@ -1,3 +1,5 @@
+import 'package:flu_anim/landing/bindings/landing_binding.dart';
+import 'package:flu_anim/landing/views/landing_page.dart';
 import 'package:get/get.dart';
 import 'package:flu_anim/auth/bindings/LoginBinding.dart';
 import 'package:flu_anim/auth/bindings/RegisterBinding.dart';
@@ -18,6 +20,7 @@ import 'package:flu_anim/verification/view/pin_page.dart';
 
 class AppRoutes {
   static const String splashPage = '/splash_page';
+  static const String landingPage = '/landing_page';
   static const String logInPage = '/login_page';
   static const String registerPage = '/register_page';
   static const String otpPage = '/otp_page';
@@ -28,6 +31,7 @@ class AppRoutes {
 
   static List<GetPage> pages = [
     GetPage(name: splashPage, page: () => SplashPage(), bindings: [SplashBinding()]),
+    GetPage(name: landingPage, page: () => LandingPage(), bindings: [LandingBinding()]),
     GetPage(name: logInPage, page: () => LoginPage(), bindings: [LoginBinding()]),
     GetPage(name: registerPage, page: () => RegisterPage(), bindings: [RegisterBinding()]),
     GetPage(name: otpPage, page: () => OtpPage(), bindings: [OtpBinding()]),
