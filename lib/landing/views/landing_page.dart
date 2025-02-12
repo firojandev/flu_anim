@@ -22,20 +22,42 @@ class LandingPage extends GetView<LandingController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image(image: AssetImage(ivSuccess)),
-                      SizedBox(width: 16,),
-                      Expanded(child: Text(dummyTxt,style: MyTextStyle.titleStyleWhite16,)),
+                      Obx(() => Opacity(
+                          opacity: controller.opacityValue.value,
+                          child: Image(image: AssetImage(ivSuccess)))),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Expanded(
+                        child: Obx(
+                          () => Opacity(
+                            opacity: controller.opacityValue.value,
+                            child: Text(
+                              dummyTxt,
+                              style: MyTextStyle.titleStyleWhite16,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
-                SizedBox(height: 16,),
+                SizedBox(
+                  height: 16,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(child: Text(dummyTxt,style: MyTextStyle.titleStyleWhite16,)),
-                      SizedBox(width: 16,),
+                      Expanded(
+                          child: Text(
+                        dummyTxt,
+                        style: MyTextStyle.titleStyleWhite16,
+                      )),
+                      SizedBox(
+                        width: 16,
+                      ),
                       Image(image: AssetImage(verifiedAccount)),
                     ],
                   ),
@@ -48,4 +70,3 @@ class LandingPage extends GetView<LandingController> {
     );
   }
 }
-
