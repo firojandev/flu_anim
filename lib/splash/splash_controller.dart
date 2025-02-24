@@ -52,8 +52,8 @@ class SplashController extends GetxController with GetTickerProviderStateMixin {
   void _navigateToNextPage() {
     bool isLogin = false; // Retrieve from shared preferences
     if (!isLogin) {
-      //Get.offNamed(AppRoutes.logInPage); // Navigate to login page
-      Get.offNamed(AppRoutes.landingPage); // Navigate to login page
+      Get.offNamed(AppRoutes.logInPage); // Navigate to login page
+      //Get.offNamed(AppRoutes.landingPage); // Navigate to login page
     } else {
       Get.offNamed(AppRoutes.homePage); // Navigate to home page
     }

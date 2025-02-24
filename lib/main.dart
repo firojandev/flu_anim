@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/get.dart';
 import 'package:flu_anim/app_routes.dart';
 import 'package:flu_anim/common/utils/app_theme.dart';
@@ -6,6 +7,8 @@ import 'package:flu_anim/common/utils/app_theme.dart';
 import 'common/app_constants.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Stripe.publishableKey = stripePublishableKey;
   runApp(const MyApp());
 }
 

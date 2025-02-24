@@ -1,4 +1,5 @@
-
+//Stripe
+String stripePublishableKey = "";
 
 //String resource
 String appName = "Flutter Anim";
